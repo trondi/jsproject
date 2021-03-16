@@ -99,7 +99,7 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 const sk = {name: 'sk', age:10};
 sk.age = 21;
 
-// 5. Dynamic typing: dynamically typed language
+// 5. Dynamic typing: dynamically typed language!
 let text = 'hello';
 console.log(`value: ${text}, type: ${typeof text}`);
 text = 1;
