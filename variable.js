@@ -2,7 +2,7 @@
 // added in ES 5
 // use this for Vanila Javascript
 'use strict';
- 
+
 // 2. Variable, rw(read/write)
 // let (added in ES 6)
 let globalName = 'global name';
@@ -36,7 +36,8 @@ const maxNumber = 5;
 // - security
 // - thread safety
 // - reduce human mistakes
-
+const dayInweek = 7;
+const maxNumber = 5;
 
 // 4. Variable types
 // primitive, single item: number, string, boolean, null, symbol
