@@ -3,7 +3,7 @@
 // use this for Vanila Javascript
 'use strict';
 
-// 2. Variable
+// 2. Variable, rw(read/write)
 // let (added in ES 6)
 let globalName = 'global name';
 {
@@ -23,7 +23,15 @@ age = 4;
 console.log(age);
 var age;
 
-// 3. Constants
+// 3. Constant, r (read only)
+// use const whenever possible.
+// only use let if variable needs to change.
+const dayInweek = 7;
+const maxNumber = 5;
+
+// Note!
+// Immutable data types: premitive type, frozen objects (i.e. object.freeze())
+// Mutable data types: all objects by default are mutable in JS
 // favor immutable data type always for a few reasons:
 // - security
 // - thread safety
@@ -91,7 +99,7 @@ console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 const sk = {name: 'sk', age:10};
 sk.age = 21;
 
-// 5. Dynamic typing: dynamically typed language
+// 5. Dynamic typing: dynamically typed language!
 let text = 'hello';
 console.log(`value: ${text}, type: ${typeof text}`);
 text = 1;

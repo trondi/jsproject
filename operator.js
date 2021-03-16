@@ -1,7 +1,9 @@
 // 1. String concatenation
-console.log('my'+'cat');
+console.log('my' + ' cat ');
 console.log('1'+2);
-console.log(`string literals: 1 + 2 = ${1 + 2}`);
+console.log(`string literals: 1 + 2 = ${1+2}`);
+console.log("eli's code");
+console.log('eli\ns code'); 
 
 // 2. Numeric operators
 console.log(1 + 1); // add
