@@ -120,7 +120,7 @@ const printYes = function () { //annoymous function
 // recursions
 const printNo = function print() {
     console.log('N');
-    print();
+    //print();
 };
 randomQuiz('wrong', printYes, printNo);
 randomQuiz('love u', printYes, printNo);
@@ -131,7 +131,7 @@ const simplePrint = function () {
     console.log('simplePrint!');
 };
 
-const simplePrint = () => console.log('simplePrint!');
+const simplePrint1 = () => console.log('simplePrint!');
 const add = (a, b) => a + b;
 /*
 const add = function (a, b) {
@@ -147,3 +147,29 @@ const simpleMultiply = (a, b) => {
 (function hello(){
     console.log('IIFE');
 })();
+
+
+/*--------------------*/
+function calculate(command, a, b){
+    switch (command){
+        case 'add':
+            console.log(`a + b = ${a} + ${b} = ${a + b}`);
+            break;
+        case 'substract':
+            console.log(`a - b = ${a} - ${b} = ${a - b}`);
+            break;
+        case 'multiply':
+            console.log(`a * b = ${a} * ${b} = ${a * b}`);
+            break;
+        case 'divide':
+            console.log(`a / b = ${a} / ${b} = ${a / b}`);
+            break;
+        case 'remainder':
+            console.log(`a % b = ${a} % ${b} = ${a % b}`);
+            break;
+        default:
+            throw Error('unknown command');
+    }
+    
+}
+calculate('substract', 5,3);
