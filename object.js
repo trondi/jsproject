@@ -80,19 +80,21 @@ const user2 = user;
 console.log(user);
 
 // old way
-const user3 = {};
+const user3 = {}; // 빈 오브젝트 만들기
 for (let key in user) {
-  user3[key] = user[key];
+  user3[key] = user[key]; // 수동적으로 할당 1st key : name  2nd key : age 
 }
-console.clear();
+console.clear(); // 이전출력 로그 지움
 console.log(user3);
 
-const user4 = Object.assign({}, user);
+// 또 다른 방법
+const user4 = Object.assign({}, user); //return user
 console.log(user4);
 
 // another example
 const fruit1 = { color: 'red' };
 const fruit2 = { color: 'blue', size: 'big' };
 const mixed = Object.assign({}, fruit1, fruit2);
-console.log(mixed.color);
-console.log(mixed.size);
+console.log(mixed.color); //blue
+console.log(mixed.size); //big
+// 뒤에나온 아이일수록 덮어씀
