@@ -74,6 +74,8 @@
   
   // Q8. check if there is a student with the score lower than 50
   {
+    //some : 무언가 있는지 없는지 확인. 배열에서 하나라도 맞는 조건이 있다면 true. 
+    //every : 모든 요소들이 이조건을 충족해야 true
     console.clear();
     const result = students.some((student) => student.score < 50);
     console.log(result);
@@ -82,28 +84,37 @@
     console.log(result2);
   }
   console.clear();
+  
   // Q9. compute students' average score
   {
-    const result = students.reduce((prev, curr) => prev.score + curr.score);
+    const r1 = students.reduce((prev, curr) => {
+      console.log('----------');
+      console.log(prev);
+      console.log(curr);
+      return curr; //return 의 콜백 함수에는 이전 반환값이 필요함. prev로 순차적으로 전달됨.
+    }, 0); //,0이 처음 값을 줌
+
+    //--------------------
+    const result = students.reduce((prev, curr) => prev.score + curr.score); //점수값을 누적하여 더함.
     console.log(result / students.length);
-  }
+  }//reduceRight : 역으로 출력
   
   // Q10. make a string containing all the scores
   // result should be: '45, 80, 90, 66, 88'
   {
     const result = students
-      .map((student) => student.score)
-      .filter((score) => score >= 50)
-      .join();
+      .map((student) => student.score) //새로운 배열로 변환
+      .filter((score) => score >= 50) //조건
+      .join(); //string으로 바뀜
     console.log(result);
   }
   
   // Bonus! do Q10 sorted in ascending order
-  // result should be: '45, 66, 80, 88, 90'
+  // result should be: '45, 66, 80, 88, 90' 오름차순
   {
     const result = students
       .map((student) => student.score)
-      .sort((a, b) => b - a)
+      .sort((a, b) => b - a) //큰게 앞으로 나옴
       .join();
     console.log(result);
   }
