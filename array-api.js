@@ -114,7 +114,7 @@
   {
     const result = students
       .map((student) => student.score)
-      .sort((a, b) => b - a) //큰게 앞으로 나옴
+      .sort((a, b) => b - a) //b-a이면 큰게 앞으로 나옴
       .join();
     console.log(result);
   }
