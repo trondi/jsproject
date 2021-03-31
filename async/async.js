@@ -1,5 +1,5 @@
 // async & await
-// clear style of using promise :)
+// clear style of using promise :)   
 
 // 1. async
 async function fetchUser() {

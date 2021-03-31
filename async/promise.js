@@ -40,7 +40,7 @@ fetchNumber
       setTimeout(() => resolve(num - 1), 1000);
     });
   })
-  .then(num => console.log(num)); //promise나 값을 전달할 수 있음. 총 2초 소요
+  .then(num => console.log(num)); //promise나 값을 전달할 수 있음. 총 2초 소요  
 
 // 4. Error Handling
 const getHen = () =>

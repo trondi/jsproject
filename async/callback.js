@@ -1,6 +1,6 @@
 'use strict';
 
-// JavaScript is synchronous. 동기적임
+// JavaScript is synchronous. 동기적임  
 // Execute the code block in order after hoisting.
 // hoisting: var, function declaration
 console.log('1');
