@@ -45,7 +45,7 @@ class UserStorage {
     .then(user => alert(`Hello ${user.name}, you have a ${user.role} role`))
     .catch(console.log);
   
-  // Homework Answer 🚀
+  // Homework Answer 🚀 
   userStorage
     .getUserWithRole() //
     .catch(console.log)
