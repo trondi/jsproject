@@ -19,7 +19,7 @@ console.log(obj_.name);//sk
 let obj2 = obj_;
 console.log(obj2.name);//sk
 
-obj.name = 'James';
+obj_.name = 'James';
 console.log(obj_.name);
 console.log(obj2.name);
 
@@ -42,6 +42,7 @@ function print(name, age) { //함수의 인자는 의미있는 단어로 작성
     console.log(`${a} ${b}`);
 }
 print(8, 33);
+
 //--------------------------------
 function add(num1,num2){
     return num1 + num2;
@@ -73,4 +74,43 @@ if(obj){
 }*/
 obj && console.log(obj,name); // false /&& obj에 대한 조건문, obj.name: 유효하지 않는 코드. 한줄로 나타낼 수 있음
 
-//----------- 4. 클래스 | 클래스 예제와 콜백 함수 최종 정리
+//------------------ 4. 클래스 | 클래스 예제와 콜백 함수 최종 정리
+class Counter {
+    constructor(runEveryFiveTimes)
+    {//생성자.. constructor도 함수이기 때문에 인자로 받아옴
+        this.counter = 0;
+        this.callback = runEveryFiveTimes;
+    }
+
+    increase() {
+        this.counter++;
+        console.log(this.counter);
+        if (this.counter % 5 === 0){
+            this.callback && this.callback(this.counter);
+            /*if(this.callback){
+                this.callback(this.counter);
+            }*/
+        }
+    }
+}
+function printSomething(num){
+    console.log(`yo! ${num}`);
+}
+function alertNum(num){
+    alert(`wow! ${num}`);
+}
+
+const printCounter = new Counter(printSomething);
+const alertCounter = new Counter(alertNum);
+
+printCounter.increase();
+printCounter.increase();
+printCounter.increase();
+printCounter.increase();
+printCounter.increase();
+
+alertCounter.increase();
+alertCounter.increase();
+alertCounter.increase();
+alertCounter.increase();
+alertCounter.increase();
