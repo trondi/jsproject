@@ -1,26 +1,26 @@
 //number, string, boolean, null, undefined
-let num  = 2;
-let num2 = num;
-console.log(num);
+let num_  = 2;
+let num2 = num_;
+console.log(num_);
 console.log(num2);
 
 num2=3;
-console.log(num);
+console.log(num_);
 console.log(num2);
 
 
 //object 주소가 할당, 주소가 복사됨. reference
-let obj = {
+let obj_ = {
     name: 'sk',
     age: 24,
 };
-console.log(obj.name);//sk
+console.log(obj_.name);//sk
 
-let obj2 = obj;
+let obj2 = obj_;
 console.log(obj2.name);//sk
 
 obj.name = 'James';
-console.log(obj.name);
+console.log(obj_.name);
 console.log(obj2.name);
 
 //let 변경 가능
@@ -29,7 +29,7 @@ console.log(obj2.name);
 //공간은 잠겨서 변경불가하지만 레퍼런스가 가리키고 있는것은 가능..
 
 
-// 2. 함수 | 함수 정의, 호출, 그리고 콜백함수
+//------------------ 2. 함수 | 함수 정의, 호출, 그리고 콜백함수
 // 반복적인 행동 -> 함수로 만듦
 function add1(num1,num2){
     return num1 + num2;
@@ -58,3 +58,19 @@ function surprise(operator){//add의 ref가 전달, operator = callback으로 �
 
 //surprise(add);
 surprise(divide);
+
+
+//------------------ 3. 연산자 | boolean의 모든것 && 연산자
+//false: 0, -0, '', null, undefined
+//true: -1, 'hello', [](배열은 object이기 때문에 true)
+let obj = {
+    name:'sk';
+}; //f: undefined
+if(obj){
+    console.log(obj.name)
+}/* else{
+    console.log('f')
+}*/
+obj && console.log(obj,name); // false /&& obj에 대한 조건문, obj.name: 유효하지 않는 코드. 한줄로 나타낼 수 있음
+
+//----------- 4. 클래스 | 클래스 예제와 콜백 함수 최종 정리
