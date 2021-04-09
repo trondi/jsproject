@@ -65,7 +65,7 @@ surprise(divide);
 //false: 0, -0, '', null, undefined
 //true: -1, 'hello', [](배열은 object이기 때문에 true)
 let obj = {
-    name:'sk';
+    name:'sk'
 }; //f: undefined
 if(obj){
     console.log(obj.name)
