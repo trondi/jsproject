@@ -42,11 +42,19 @@ function print(name, age) { //함수의 인자는 의미있는 단어로 작성
     console.log(`${a} ${b}`);
 }
 print(8, 33);
-
-
-function surprise(operator){
-    const result = operator();
-    console.log(result);
+//--------------------------------
+function add(num1,num2){
+    return num1 + num2;
 }
 
-surprise(add);
+function divide(num1,num2){
+    return num1 / num2;
+}
+
+function surprise(operator){//add의 ref가 전달, operator = callback으로 바꿀 수 있음
+    const result = operator(2, 3);
+    console.log(result);//add(2,3)를 수행하는 것과 동일
+}
+
+//surprise(add);
+surprise(divide);
